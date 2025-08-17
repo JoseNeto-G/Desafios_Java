@@ -1,4 +1,4 @@
-public class Conta implements Transferencia{
+public class Conta implements Transferencia, Infos{
     private static final int AGENCIA_PADRAO = 1;
 	private static int SEQUENCIAL = 1;
 
@@ -43,7 +43,7 @@ public class Conta implements Transferencia{
 		return saldo;
 	}
 
-	protected void imprimirInfosComuns() {
+	public void imprimirExtrato() {
 		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
 		System.out.println(String.format("Agencia: %d", this.agencia));
 		System.out.println(String.format("Numero: %d", this.numero));
